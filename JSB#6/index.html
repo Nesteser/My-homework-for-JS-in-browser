@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="gallery"></section>
+
+    <script src="script.js"></script>
+    <script>
+      const photos = JSON.parse(photosData);
+
+      console.log(photos);
+
+      function menuVanilaTemplate(menu) {
+        const result = document.createElement("article");
+        result.classList.add("photo");
+
+        const headerName = document.createElement("h1");
+        headerName.classList.add("header_name");
+        headerName.textContent = menu.name;
+        result.appendChild(headerName);
+
+        const photoImage = document.createElement("img");
+        photoImage.classList.add("photo_alc");
+        photoImage.src = menu.image_url;
+        result.appendChild(photoImage);
+
+        const tagline = document.createElement("p");
+        tagline.classList.add("tagline");
+        tagline.textContent = menu.tagline;
+        result.appendChild(tagline);
+
+        const firstBrewed = document.createElement("p");
+        firstBrewed.classList.add("firstBrewed");
+        firstBrewed.textContent = menu.first_brewed;
+        result.appendChild(firstBrewed);
+
+        return result;
+      }
+
+      // function menuStringTemplate(menu) {
+      //   return `
+      //   <article class="photo">
+      //     <h1 class="header_name">${menu.name}</h1>
+      //     <div class="photo_image"><img class = "photo_alc" src="${menu.image_url}" alt=""></div>
+      //     <p class="tagline">${menu.tagline}</p>
+      //     <p class="first_brewed">${menu.first_brewed}</p>
+      //   </article>
+
+      //   `;
+      // }
+
+      const gallery = document.querySelector(".gallery");
+
+      for (i = 0; i <= photos.length; i++) {
+        gallery.appendChild(menuVanilaTemplate(photos[i]));
+      }
+    </script>
+  </body>
+</html>

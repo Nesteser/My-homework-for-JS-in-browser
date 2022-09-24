@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <input id="input" type="text" value="" />
+    <button id="button">password</button>
+
+    <script>
+      const input = document.getElementById("input");
+      const button = document.getElementById("button");
+      let data = "abcdefghijklmnopqrstuvwxyz0123456789";
+      let password = [];
+      password = data.split("");
+      let genPassword = [];
+      for (let i = 0; i < 8; i++) {
+        let rand = Math.random() > 0.5;
+        if (rand) {
+          genPassword.push(
+            password[Math.floor(Math.random() * password.length)]
+          );
+        } else {
+          genPassword.push(
+            password[Math.floor(Math.random() * password.length)].toUpperCase()
+          );
+        }
+      }
+      button.onclick = function () {
+        input.value = genPassword.join("");
+      };
+    </script>
+  </body>
+</html>

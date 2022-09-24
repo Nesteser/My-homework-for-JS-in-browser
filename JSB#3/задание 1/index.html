@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      .blok {
+        display: flex;
+        background: rgb(0, 0, 0);
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blok">
+      <h1 class="header"></h1>
+    </div>
+
+    <script>
+      const blok = document.getElementsByClassName("blok")[0];
+      const header = document.getElementsByClassName("header")[0];
+
+      let getNum = function () {
+        return Math.floor(Math.random() * 256);
+      };
+
+      let interval = setInterval(function () {
+        color = "#" + getColor() + getColor() + getColor();
+        blok.style.background = color;
+      }, 100);
+
+      blok.onclick = function stopColor() {
+        clearInterval(interval);
+        header.textContent = color;
+      };
+
+      getColor = function () {
+        return dec2hex(getNum());
+      };
+
+      dec2hex = function (d) {
+        if (d > 15) {
+          return d.toString(16);
+        } else {
+          return "0" + d.toString(16);
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+.container {
+  max-width: 1046px;
+  margin: 0px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: black;
+  font-family: montserrat;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* Heder */
+
+.heder {
+  display: flex;
+  justify-content: flex-start;
+  gap: 132px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .heder {
+    gap: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .heder {
+    gap: 40px;
+  }
+}
+
+.menu {
+  gap: 21px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.heder_logo {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252b42;
+}
+.heder_menu {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+/* Page */
+
+.page {
+}
+
+.main-blok_container{
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.main-blok_title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  padding-bottom: 35px;
+}
+.main-blok_text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  padding-bottom: 35px;
+}
+.main-blok_buttons{
+    display: flex;
+    gap: 10px;
+}
+.main-blok_buttons_1 {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 36px;
+  gap: 10px;
+  width: 185px;
+  height: 48px;
+  background: #ff7b47;
+  border-radius: 37px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: aliceblue;
+}
+.main-blok_buttons_2 {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 36px;
+  gap: 10px;
+  width: 157px;
+  height: 48px;
+  border: 1px solid #0d5c63;
+  border-radius: 37px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.blok{
+    width: 509px;
+    padding-top: 80px;
+}

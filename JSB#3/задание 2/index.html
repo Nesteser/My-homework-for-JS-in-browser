@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .button {
+        height: 25px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button" id="button">0</button>
+
+    <script>
+      function now() {
+        return new Date().getTime();
+      }
+      const button = document.getElementById(`button`);
+
+      button.addEventListener("click", function () {
+        if (this.last && now() - this.last < 1000) {
+          this.innerText = "0";
+          this.disabled = true;
+          return;
+        }
+        let clicks = parseInt(this.innerText, 10);
+        clicks += 1;
+        this.innerText = clicks;
+        this.last = now();
+      });
+    </script>
+  </body>
+</html>

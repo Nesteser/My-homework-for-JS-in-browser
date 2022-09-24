@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .blok {
+        background: rgb(0, 0, 0);
+        height: 1400px;
+      }
+      .button_1 {
+        height: 40px;
+        width: 100px;
+        background-color: brown;
+      }
+      .button_2 {
+        height: 40px;
+        width: 100px;
+        background-color: green;
+      }
+      .button_3 {
+        height: 40px;
+        width: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blok" class="blok">
+      <button id="button_1" class="button_1">Кнопка 1</button>
+      <button id="button_2" class="button_2">Кнопка 2</button>
+      <button id="button_3" class="button_3">Кнопка 3</button>
+    </div>
+    <script>
+      const button_1 = document.getElementById("button_1");
+      const button_2 = document.getElementById("button_2");
+      const button_3 = document.getElementById("button_3");
+      const blok = document.getElementById("blok");
+
+      let rgb = [0, 0, 0];
+      button_1.onclick = function () {
+        rgb[0] += 10;
+        blok.style.background = `rgb(${rgb.join(",")})`;
+      };
+      button_2.onclick = function () {
+        rgb[1] += 15;
+        blok.style.background = `rgb(${rgb.join(",")})`;
+      };
+      button_3.onclick = function () {
+        rgb[2] += 22;
+        blok.style.background = `rgb(${rgb.join(",")})`;
+      };
+    </script>
+  </body>
+</html>

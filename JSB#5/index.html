@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+
+    <div class="image__body">
+
+    </div>
+
+    <script>
+        const imageBody = document.querySelector('.image__body');
+
+        const appImage = document.createElement('img');
+
+        appImage.src = "https://mobimg.b-cdn.net/v3/fetch/f8/f8bbcc0d452901ff48cfa4d759877f2e.jpeg"
+        imageBody.appendChild(appImage);
+
+
+
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>

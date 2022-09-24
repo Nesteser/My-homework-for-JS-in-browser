@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .blok {
+        height: 1360px;
+        background-image: url(https://vsegda-pomnim.com/uploads/posts/2022-03/1647829150_26-vsegda-pomnim-com-p-peshchera-foto-29.jpg);
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .link {
+        display: flex;
+      }
+      .button {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <a href=""></a>
+    <div id="blok" class="blok">
+      <button id="button" class="button">Вход в пещеру</button>
+    </div>
+
+    <script>
+      const button = document.getElementById("button");
+
+      button.onclick = function () {
+        location.href = "index2.html";
+      };
+    </script>
+  </body>
+</html>

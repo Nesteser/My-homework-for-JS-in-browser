@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+
+
+    </style>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="container1"><button class="button">Приветственная кнопка</button></div>
+    </header>
+    <main>
+      <section>
+        <div class="container2"> <button class="button">Приветственная кнопка</button></div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <section>
+          <div class="container3"><button class="button">Приветственная кнопка</button></div>
+        </section>
+      </div>
+    </footer>
+
+    <script>
+        const body = document.querySelector(".body");
+        const header = document.querySelector(".header");
+        const button = document.querySelectorAll(".button");
+
+          const clickButton = function(event) {
+          const target = event.target;
+          const parentTarget = target.parentElement;
+          const header = document.createElement("h1");
+          header.textContent = "Привет, пользователь!";
+          parentTarget.appendChild(header); 
+
+
+        }
+        button.forEach(element => {
+          element.addEventListener("click", clickButton )
+        });
+     
+  
+        
+        
+      </script>
+    </body>
+  </body>
+</html>
